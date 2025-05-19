@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"  
 import DPH from "../assets/services/DigitalPrintingH.jpg"
 import OPH from "../assets/services/OffsetPrintingH.jpg"
 import SPH from "../assets/services/ScreenPrintingH.jpg"
@@ -38,7 +38,7 @@ const services = [
         desc: "Custom packaging for retail and luxury products.",
         img: ISH,
     }
-];
+]  
 
 const OurServices = () => {
     return (
@@ -93,7 +93,7 @@ const OurServices = () => {
                 </motion.div>
             </div>
         </section>
-    );
-};
+    )  
+}  
 
-export default OurServices;
+export default OurServices  

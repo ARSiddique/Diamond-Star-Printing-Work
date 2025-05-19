@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import React, { useState } from "react"  
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react"  
 
 const ContactUs = () => {
     const [formData, setFormData] = useState({
@@ -7,18 +7,18 @@ const ContactUs = () => {
         email: "",
         subject: "",
         message: "",
-    });
+    })  
 
-    const [status, setStatus] = useState(null);
+    const [status, setStatus] = useState(null)  
 
     const handleChange = (e) =>
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+        setFormData({ ...formData, [e.target.name]: e.target.value })  
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        setStatus("Thank you! We'll get back to you soon.");
-        setFormData({ name: "", email: "", subject: "", message: "" });
-    };
+        e.preventDefault()  
+        setStatus("Thank you! We'll get back to you soon.")  
+        setFormData({ name: "", email: "", subject: "", message: "" })  
+    }  
 
     return (
         <div className="w-full">
@@ -153,7 +153,7 @@ const ContactUs = () => {
                 ></iframe>
             </div>
         </div>
-    );
-};
+    )  
+}  
 
-export default ContactUs;
+export default ContactUs  

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"  
 import DPPH from "../assets/products/DPPH.jpg"
 import CPH from "../assets/products/CPH.jpg"
 import PPH from "../assets/products/PPH.jpg"
@@ -19,7 +19,7 @@ const products = [
         desc: "Posters, banners, window graphics, floor graphics & more.",
         img: DPPH,
     },
-];
+]  
 
 const Products = () => {
     return (
@@ -63,7 +63,7 @@ const Products = () => {
                 </div>
             </div>
         </section>
-    );
-};
+    )  
+}  
 
-export default Products;
+export default Products  

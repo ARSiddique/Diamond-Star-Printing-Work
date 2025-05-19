@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"  
 
 const imageVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -10,7 +10,7 @@ const imageVariants = {
             duration: 0.5,
         },
     }),
-};
+}  
 
 export default function ServiceGallery({ images = [] }) {
     return (
@@ -36,5 +36,5 @@ export default function ServiceGallery({ images = [] }) {
                 ))}
             </div>
         </div>
-    );
+    )  
 }

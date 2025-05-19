@@ -1,5 +1,5 @@
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import React from 'react'  
+import { useParams, Link } from 'react-router-dom'  
 
 const services = [
     {
@@ -178,12 +178,12 @@ const services = [
             }
         ]
     }
-];
+]  
 
 
 const SerDetail = () => {
-    const { id } = useParams();
-    const service = services.find(s => s.id === id);
+    const { id } = useParams()  
+    const service = services.find(s => s.id === id)  
 
     if (!service) {
         return (
@@ -193,7 +193,7 @@ const SerDetail = () => {
                     Back to Services
                 </Link>
             </div>
-        );
+        )  
     }
 
     return (
@@ -243,7 +243,7 @@ const SerDetail = () => {
                 </div>
             </main>
         </div>
-    );
-};
+    )  
+}  
 
-export default SerDetail;
+export default SerDetail  

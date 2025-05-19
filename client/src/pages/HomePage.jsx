@@ -1,9 +1,9 @@
-import Hero from "../components/Hero";
-import Questionnaire from "../components/Questionnaire";
-import Services from "../components/Services";
-import Products from "../components/Products";
-import Testimonials from "../components/Testimonials";
-import AboutSection from "../components/AboutSection ";
+import Hero from "../components/Hero"  
+import Questionnaire from "../components/Questionnaire"  
+import Services from "../components/Services"  
+import Products from "../components/Products"  
+import Testimonials from "../components/Testimonials"  
+import AboutSection from "../components/AboutSection "  
 
 const HomePage = () => {
     return (
@@ -16,7 +16,7 @@ const HomePage = () => {
             <Testimonials />
 
         </div>
-    );
-};
+    )  
+}  
 
-export default HomePage;
+export default HomePage  

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "framer-motion" 
 
 const AboutSection = () => {
     return (
@@ -38,7 +38,7 @@ const AboutSection = () => {
                 </motion.div>
             </div>
         </section>
-    );
-};
+    ) 
+} 
 
-export default AboutSection;
+export default AboutSection 

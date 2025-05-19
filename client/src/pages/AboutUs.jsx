@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import aboutHero from '../assets/about-img.jpg'; // make sure image is here
+import { motion } from 'framer-motion'
+import aboutHero from '../assets/services/BS.jpg'   // make sure image is here
 
 const AboutUs = () => {
     return (
@@ -138,7 +138,7 @@ const AboutUs = () => {
                 </button>
             </motion.section>
         </div>
-    );
-};
+    )
+}
 
-export default AboutUs;
+export default AboutUs  

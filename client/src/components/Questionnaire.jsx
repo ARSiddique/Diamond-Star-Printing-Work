@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"  
 
 const Questionnaire = () => (
     <motion.section
@@ -121,6 +121,6 @@ const Questionnaire = () => (
             </motion.form>
         </div>
     </motion.section>
-);
+)  
 
-export default Questionnaire;
+export default Questionnaire  

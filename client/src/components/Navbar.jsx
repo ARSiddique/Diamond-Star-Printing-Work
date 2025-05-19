@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { HiMenuAlt3, HiX } from 'react-icons/hi';
+import { useState } from 'react'  
+import { NavLink } from 'react-router-dom'  
+import { HiMenuAlt3, HiX } from 'react-icons/hi'  
 
 const navLinks = [
     { name: 'Home', path: '/' },
@@ -9,12 +9,12 @@ const navLinks = [
     // { name: 'Products', path: '/products' },
     { name: 'Gallery', path: '/gallery' },
     { name: 'Contact', path: '/contact' },
-];
+]  
 
 const Navbar = () => {
-    const [isMobileOpen, setIsMobileOpen] = useState(false);
+    const [isMobileOpen, setIsMobileOpen] = useState(false)  
 
-    const toggleMenu = () => setIsMobileOpen(!isMobileOpen);
+    const toggleMenu = () => setIsMobileOpen(!isMobileOpen)  
 
     return (
         <nav className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white sticky top-0 z-50 shadow-lg py-4">
@@ -78,7 +78,7 @@ const Navbar = () => {
                 </ul>
             )}
         </nav>
-    );
-};
+    )  
+}  
 
-export default Navbar;
+export default Navbar  

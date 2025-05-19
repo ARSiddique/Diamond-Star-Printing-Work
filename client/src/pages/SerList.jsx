@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from "react"  
+import { Link } from "react-router-dom"  
 
 const services = [
     {
@@ -59,7 +59,7 @@ const services = [
         details: "Weather-resistant banners for events, promotions, and business advertising.",
     }
 
-];
+]  
 
 const ServicesList = () => {
     return (
@@ -85,7 +85,7 @@ const ServicesList = () => {
                 ))}
             </div>
         </div>
-    );
-};
+    )  
+}  
 
-export default ServicesList;
+export default ServicesList  

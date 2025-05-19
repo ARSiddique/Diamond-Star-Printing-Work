@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from "react"  
+import { Link } from "react-router-dom"  
 import DPS from "../assets/services/DPS.jpg"
 import OPS from "../assets/services/OPS.jpg"
 import SPS from "../assets/services/SPS.jpg"
@@ -59,7 +59,7 @@ const services = [
         description: "Weather-resistant banners for events, promotions, and business advertising.",
         image: BS,
     },
-];
+]  
 
 const Services = () => {
     return (
@@ -125,7 +125,7 @@ const Services = () => {
                 </div>
             </section>
         </div>
-    );
-};
+    )  
+}  
 
-export default Services;
+export default Services  

@@ -1,4 +1,4 @@
-import { FaEnvelope } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa"  
 
 const EmailButton = () => (
     <a
@@ -7,6 +7,6 @@ const EmailButton = () => (
     >
         <FaEnvelope size={20} />
     </a>
-);
+)  
 
-export default EmailButton;
+export default EmailButton  

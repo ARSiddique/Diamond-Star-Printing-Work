@@ -1,17 +1,17 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from 'react'  
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'  
 
-import Home from './pages/HomePage';
-import About from './pages/AboutUs';
-import Gallery from './pages/Gallery';
-import Contact from './pages/ContactUs';
-import Navbar from './components/Navbar';
-import ScrollToTopButton from './components/ScrollToTopButton';
-import WhatsAppButton from './components/WhatsAppButton';
-import EmailButton from './components/EmailButton';
-import Footer from './components/Footer';
-import Services from './pages/Services';
-import SerDetail from './pages/SerDetail';
+import Home from './pages/HomePage'  
+import About from './pages/AboutUs'  
+import Gallery from './pages/Gallery'  
+import Contact from './pages/ContactUs'  
+import Navbar from './components/Navbar'  
+import ScrollToTopButton from './components/ScrollToTopButton'  
+import WhatsAppButton from './components/WhatsAppButton'  
+import EmailButton from './components/EmailButton'  
+import Footer from './components/Footer'  
+import Services from './pages/Services'  
+import SerDetail from './pages/SerDetail'  
 
 function App() {
   return (
@@ -32,7 +32,7 @@ function App() {
       </Routes>
       <Footer />
     </>
-  );
+  )  
 }
 
-export default App;
+export default App  

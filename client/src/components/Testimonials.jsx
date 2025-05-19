@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"  
 
 const testimonials = [
     {
@@ -10,7 +10,7 @@ const testimonials = [
         feedback: "Excellent service and timely delivery of all my packaging materials.",
     },
     // You can add more here
-];
+]  
 
 const Testimonials = () => {
     return (
@@ -60,7 +60,7 @@ const Testimonials = () => {
                 </motion.div>
             </div>
         </section>
-    );
-};
+    )  
+}  
 
-export default Testimonials;
+export default Testimonials  

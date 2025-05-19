@@ -56,4 +56,4 @@ const services = [
         details: "Weather-resistant banners for events, promotions, and business advertising.",
     }
 
-];
+]  

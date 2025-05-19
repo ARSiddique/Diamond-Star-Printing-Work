@@ -1,11 +1,11 @@
-import { useState } from "react";
-import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from "react-leaflet";
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import "leaflet/dist/leaflet.css";
-import L from "leaflet";
+import { useState } from "react"  
+import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from "react-leaflet"  
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa"  
+import "leaflet/dist/leaflet.css"  
+import L from "leaflet"  
 
 // Fix Leaflet default icon issue
-delete L.Icon.Default.prototype._getIconUrl;
+delete L.Icon.Default.prototype._getIconUrl  
 L.Icon.Default.mergeOptions({
     iconRetinaUrl:
         "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png",
@@ -13,23 +13,23 @@ L.Icon.Default.mergeOptions({
         "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
     shadowUrl:
         "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
-});
+})  
 
 const LocationMarker = () => {
-    const [position, setPosition] = useState([25.276987, 55.296249]); // Dubai default
+    const [position, setPosition] = useState([25.276987, 55.296249])   // Dubai default
 
     useMapEvents({
         click(e) {
-            setPosition([e.latlng.lat, e.latlng.lng]);
+            setPosition([e.latlng.lat, e.latlng.lng])  
         },
-    });
+    })  
 
     return position === null ? null : (
         <Marker position={position}>
             <Popup>Your selected location</Popup>
         </Marker>
-    );
-};
+    )  
+}  
 
 const Footer = () => {
     return (
@@ -89,7 +89,7 @@ const Footer = () => {
                         style={{ height: "100%", width: "100%" }}
                     >
                         <TileLayer
-                            attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+                            attribution='&copy   <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         />
                         <LocationMarker />
@@ -98,10 +98,10 @@ const Footer = () => {
             </div>
 
             <div className="text-center mt-10 text-gray-400 text-sm">
-                &copy; {new Date().getFullYear()} Your Company. All rights reserved.
+                &copy   {new Date().getFullYear()} Your Company. All rights reserved.
             </div>
         </footer>
-    );
-};
+    )  
+}  
 
-export default Footer;
+export default Footer  

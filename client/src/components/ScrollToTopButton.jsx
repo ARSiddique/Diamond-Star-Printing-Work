@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
-import { FaArrowUp } from "react-icons/fa";
+import { useEffect, useState } from "react"  
+import { FaArrowUp } from "react-icons/fa"  
 
 const ScrollToTopButton = () => {
-    const [visible, setVisible] = useState(false);
+    const [visible, setVisible] = useState(false)  
 
     useEffect(() => {
         const toggleVisibility = () => {
-            setVisible(window.scrollY > 300);
-        };
-        window.addEventListener("scroll", toggleVisibility);
-        return () => window.removeEventListener("scroll", toggleVisibility);
-    }, []);
+            setVisible(window.scrollY > 300)  
+        }  
+        window.addEventListener("scroll", toggleVisibility)  
+        return () => window.removeEventListener("scroll", toggleVisibility)  
+    }, [])  
 
     return visible ? (
         <button
@@ -19,7 +19,7 @@ const ScrollToTopButton = () => {
         >
             <FaArrowUp />
         </button>
-    ) : null;
-};
+    ) : null  
+}  
 
-export default ScrollToTopButton;
+export default ScrollToTopButton  
