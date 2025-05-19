@@ -1,36 +1,43 @@
 import { motion } from "framer-motion";
+import DPH from "../assets/services/DigitalPrintingH.jpg"
+import OPH from "../assets/services/OffsetPrintingH.jpg"
+import SPH from "../assets/services/ScreenPrintingH.jpg"
+import CRH from "../assets/services/CarRappingH.jpg"
+import SRH from "../assets/services/SignboardsH.jpg"
+import ISH from "../assets/services/IndoorSignagesH.jpg"
 
 const services = [
-    {
-        title: "Design and Pre-Press",
-        desc: "Creative designs using Adobe Suite, ready for production.",
-        img: "https://via.placeholder.com/300x200?text=Design+%26+Pre-Press",
-    },
+
     {
         title: "Digital Printing",
         desc: "Fast turnaround digital prints with high-quality finish.",
-        img: "https://via.placeholder.com/300x200?text=Digital+Printing",
-    },
-    {
-        title: "Large Format Printing",
-        desc: "Banners, posters, and signage for big impact marketing.",
-        img: "https://via.placeholder.com/300x200?text=Large+Format",
-    },
-    {
-        title: "Binding & Finishing",
-        desc: "Embossing, laminating, folding, and perfect binding options.",
-        img: "https://via.placeholder.com/300x200?text=Finishing",
+        img: DPH,
     },
     {
         title: "Offset Printing",
-        desc: "Professional offset printing for large volumes.",
-        img: "https://via.placeholder.com/300x200?text=Offset+Printing",
+        desc: "Banners, posters, and signage for big impact marketing.",
+        img: OPH,
     },
     {
-        title: "Packaging Solutions",
-        desc: "Custom packaging for retail and luxury products.",
-        img: "https://via.placeholder.com/300x200?text=Packaging",
+        title: "Screen Printing",
+        desc: "Embossing, laminating, folding, and perfect binding options.",
+        img: SPH,
     },
+    {
+        title: "Car Wrapping",
+        desc: "Professional offset printing for large volumes.",
+        img: CRH,
+    },
+    {
+        title: "Signboards",
+        desc: "Custom packaging for retail and luxury products.",
+        img: SRH,
+    },
+    {
+        title: "Indoor Signages",
+        desc: "Custom packaging for retail and luxury products.",
+        img: ISH,
+    }
 ];
 
 const OurServices = () => {
@@ -41,7 +48,7 @@ const OurServices = () => {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     className="text-4xl font-extrabold mb-16 tracking-wide"
                 >
                     Our Services
@@ -50,7 +57,7 @@ const OurServices = () => {
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     variants={{
                         visible: {
                             transition: {

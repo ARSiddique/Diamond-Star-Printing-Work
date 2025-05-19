@@ -10,19 +10,19 @@ const slides = [
         image: "/hero/slide1.jpg",
         title: "Premium Commercial Printing",
         subtitle: "Where quality meets creativity in every print",
-        cta: "Get in Touch",
+        // cta: "Get in Touch",
     },
     {
         image: "/hero/slide2.jpg",
         title: "Custom Packaging Solutions",
         subtitle: "Elevate your brand with standout packaging",
-        cta: "Request a Quote",
+        // cta: "Request a Quote",
     },
     {
         image: "/hero/slide3.jpg",
         title: "Professional Print Services",
         subtitle: "Helping your ideas come to life in print",
-        cta: "View Our Work",
+        // cta: "View Our Work",
     },
 ];
 

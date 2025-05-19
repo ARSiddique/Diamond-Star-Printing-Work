@@ -23,7 +23,7 @@ const Navbar = () => {
                 <div className="flex items-center gap-2 cursor-pointer select-none">
                     <img
                         src="/logo.png"
-                        alt="AL BONY Logo"
+                        alt="Diamond Star Printing Works Logo"
                         className="h-10"
                     />
                     <span className="text-lg md:text-xl font-bold tracking-wide">

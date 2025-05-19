@@ -142,7 +142,7 @@ const ContactUs = () => {
             {/* Map */}
             <div className="rounded-lg overflow-hidden shadow-lg mb-20">
                 <iframe
-                    title="Al Bony Press Location"
+                    title="Diamond Star Printing Works Press Location"
                     src="https://www.google.com/maps/embed?pb=..."
                     width="100%"
                     height="300"

@@ -1,20 +1,23 @@
 import { motion } from "framer-motion";
+import DPPH from "../assets/products/DPPH.jpg"
+import CPH from "../assets/products/CPH.jpg"
+import PPH from "../assets/products/PPH.jpg"
 
 const products = [
     {
         title: "Commercial Products",
         desc: "Books, brochures, cards, calendars & more for business use.",
-        img: "https://via.placeholder.com/300x200?text=Commercial+Products",
+        img: CPH,
     },
     {
         title: "Packaging Products",
         desc: "Rigid boxes, shopping bags, luxury packaging solutions.",
-        img: "https://via.placeholder.com/300x200?text=Packaging",
+        img: PPH,
     },
     {
         title: "Digital Printing",
         desc: "Posters, banners, window graphics, floor graphics & more.",
-        img: "https://via.placeholder.com/300x200?text=Digital+Prints",
+        img: DPPH,
     },
 ];
 

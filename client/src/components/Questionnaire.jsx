@@ -13,7 +13,7 @@ const Questionnaire = () => (
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 className="text-3xl font-bold text-white text-center mb-12"
             >
                 Let’s Get to Know You
@@ -30,7 +30,7 @@ const Questionnaire = () => (
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     className="flex flex-col"
                 >
                     <label htmlFor="name" className="text-sm font-medium text-gray-700 mb-1">Your Name</label>
@@ -46,7 +46,7 @@ const Questionnaire = () => (
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     className="flex flex-col"
                 >
                     <label htmlFor="company" className="text-sm font-medium text-gray-700 mb-1">Company Name</label>
@@ -62,7 +62,7 @@ const Questionnaire = () => (
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     className="flex flex-col"
                 >
                     <label htmlFor="email" className="text-sm font-medium text-gray-700 mb-1">Email Address</label>
@@ -78,7 +78,7 @@ const Questionnaire = () => (
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     className="flex flex-col"
                 >
                     <label htmlFor="service" className="text-sm font-medium text-gray-700 mb-1">Service Required</label>
@@ -98,7 +98,7 @@ const Questionnaire = () => (
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     className="flex flex-col"
                 >
                     <label htmlFor="message" className="text-sm font-medium text-gray-700 mb-1">Message</label>

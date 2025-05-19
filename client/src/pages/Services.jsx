@@ -1,54 +1,63 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import DPS from "../assets/services/DPS.jpg"
+import OPS from "../assets/services/OPS.jpg"
+import SPS from "../assets/services/SPS.jpg"
+import CWS from "../assets/services/CWS.jpg"
+import SBS from "../assets/services/SBS.jpg"
+import IDSS from "../assets/services/IDSS.jpg"
+import SS from "../assets/services/SS.jpg"
+import BS from "../assets/services/BS.jpg"
+
 
 const services = [
     {
         id: "digital-printing",
         title: "Digital Printing",
         description: "High-resolution digital prints for brochures, flyers, business cards, and more.",
-        image: "/images/services/digital.jpg",
+        image: DPS,
     },
     {
         id: "offset-printing",
         title: "Offset Printing",
         description: "Perfect for large volume print jobs with consistent quality and vibrant color reproduction.",
-        image: "/images/services/offset.jpg",
+        image: OPS,
     },
     {
         id: "screen-printing",
         title: "Screen Printing",
         description: "Reliable screen printing solutions for packaging, apparel, and industrial applications.",
-        image: "/images/services/screen.jpg",
+        image: SPS,
     },
     {
         id: "car-wrapping",
         title: "Car Wrapping",
         description: "Transform your vehicles into powerful moving advertisements with our custom wraps.",
-        image: "/images/services/carwrap.jpg",
+        image: CWS,
     },
     {
         id: "signboards",
         title: "Signboards",
         description: "We create bold, durable signboards for both indoor and outdoor use.",
-        image: "/images/services/signboard.jpg",
+        image: SBS,
     },
     {
         id: "indoor-signages",
         title: "Indoor Signages",
         description: "Sleek and professional indoor signs for offices, exhibitions, and shops.",
-        image: "/images/services/indoor.jpg",
+        image: IDSS,
     },
     {
         id: "stickers",
         title: "Stickers",
         description: "Custom-cut stickers for branding, promotions, packaging, and more.",
-        image: "/images/services/stickers.jpg",
+        image: SS,
     },
     {
         id: "banners",
         title: "Banners",
         description: "Weather-resistant banners for events, promotions, and business advertising.",
-        image: "/images/services/banners.jpg",
+        image: BS,
     },
 ];
 
@@ -102,7 +111,7 @@ const Services = () => {
             {/* Extra Section: Why Choose Us */}
             <section className="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-20 px-6">
                 <div className="max-w-5xl mx-auto text-center">
-                    <h2 className="text-3xl font-bold mb-6">Why Choose Al Bony?</h2>
+                    <h2 className="text-3xl font-bold mb-6">Why Choose Diamond Star Printing Works?</h2>
                     <p className="text-lg max-w-3xl mx-auto mb-6">
                         With decades of experience, cutting-edge equipment, and a team committed to perfection,
                         we ensure your printing needs are handled with care and creativity.

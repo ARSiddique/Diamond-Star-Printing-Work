@@ -19,7 +19,7 @@ const AboutUs = () => {
                     transition={{ duration: 0.9 }}
                 >
                     <h1 className="text-5xl font-bold mb-4 drop-shadow-lg">
-                        About Al Bony Printing Press
+                        About Diamond Star Printing Works Printing Press
                     </h1>
                     <p className="text-lg max-w-2xl mx-auto">
                         Serving the UAE with world-class printing for over 25 years.
@@ -37,7 +37,7 @@ const AboutUs = () => {
             >
                 <h2 className="text-4xl font-bold mb-6 text-[#0a2540]">Who We Are</h2>
                 <p className="text-lg leading-relaxed max-w-4xl mx-auto text-gray-600">
-                    Al Bony Printing Press LLC is a pioneer in the printing industry in the UAE, trusted by clients for quality,
+                    Diamond Star Printing Works Printing Press LLC is a pioneer in the printing industry in the UAE, trusted by clients for quality,
                     reliability, and innovation. With a passionate team and cutting-edge equipment, we bring designs to life.
                 </p>
             </motion.section>
@@ -102,7 +102,7 @@ const AboutUs = () => {
                 transition={{ duration: 0.8 }}
             >
                 <div className="max-w-6xl mx-auto text-center">
-                    <h2 className="text-4xl font-bold mb-10">Why Choose Al Bony?</h2>
+                    <h2 className="text-4xl font-bold mb-10">Why Choose Diamond Star Printing Works?</h2>
                     <div className="grid md:grid-cols-3 gap-10 text-left">
                         {[
                             ['Premium Quality', 'Only the best materials and latest machines used.'],

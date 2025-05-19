@@ -32,7 +32,7 @@ const AboutSection = () => {
                         Who We Are
                     </h2>
                     <p className="text-gray-700 text-lg leading-relaxed">
-                        Al Bony Press is a leading commercial printing company providing exceptional services across the UAE.
+                        Diamond Star Printing Works Press is a leading commercial printing company providing exceptional services across the UAE.
                         Our mission is to deliver high-quality print solutions that help businesses stand out.
                     </p>
                 </motion.div>
