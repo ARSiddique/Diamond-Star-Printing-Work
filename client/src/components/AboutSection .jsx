@@ -1,5 +1,6 @@
 import { motion } from "framer-motion" 
 
+
 const AboutSection = () => {
     return (
         <section className="bg-gradient-to-r from-blue-100 to-blue-200 py-24"> {/* Increased vertical padding */}
@@ -11,7 +12,7 @@ const AboutSection = () => {
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                 >
                     <img
                         src="/about-img.jpg"
@@ -26,7 +27,7 @@ const AboutSection = () => {
                     initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                 >
                     <h2 className="text-4xl font-bold text-blue-900 mb-6 border-l-4 border-yellow-400 pl-4">
                         Who We Are

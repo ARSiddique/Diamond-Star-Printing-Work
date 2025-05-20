@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion'
 import aboutHero from '../assets/services/BS.jpg'   // make sure image is here
+import { Link } from "react-router-dom";
+
 
 const AboutUs = () => {
     return (
@@ -133,9 +135,12 @@ const AboutUs = () => {
                 viewport={{ once: false }}
                 transition={{ duration: 0.8 }}
             >
-                <button className="bg-[#0a2540] text-white px-10 py-4 rounded shadow-md hover:bg-yellow-500 hover:text-[#0a2540] transition duration-300">
-                    Get in Touch
-                </button>
+                <Link to="/contact">
+                    <button className="bg-[#0a2540] text-white px-10 py-4 rounded shadow-md hover:bg-yellow-500 hover:text-[#0a2540] transition duration-300">
+                        Get in Touch
+                    </button>
+                </Link>
+
             </motion.section>
         </div>
     )

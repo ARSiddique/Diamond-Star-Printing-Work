@@ -66,12 +66,31 @@ const Services = () => {
         <div className="text-gray-800 font-sans">
 
             {/* Hero Section */}
-            <section className="min-h-[90vh] bg-black flex items-center justify-center text-white text-center px-6">
+            {/* <section className="min-h-[90vh] bg-black flex items-center justify-center text-white text-center px-6">
                 <div>
                     <h1 className="text-5xl md:text-6xl font-bold mb-4">Our Services</h1>
                     <p className="text-lg md:text-xl">Excellence in every print we deliver</p>
                 </div>
+            </section> */}
+
+            <section className="relative min-h-[90vh] flex items-center justify-center text-white text-center px-6">
+                {/* Background Image */}
+                <div
+                    className="absolute inset-0 bg-cover bg-center z-0"
+                    style={{
+                        backgroundImage: `url(${SBS})`, // Replace DPS with your desired background image
+                    }}
+                >
+                    <div className="absolute inset-0 bg-black opacity-60"></div> {/* Black overlay */}
+                </div>
+
+                {/* Text Content */}
+                <div className="relative z-10">
+                    <h1 className="text-5xl md:text-6xl font-bold mb-4">Our Services</h1>
+                    <p className="text-lg md:text-xl">Excellence in every print we deliver</p>
+                </div>
             </section>
+
 
             {/* Service Sections */}
             {services.map((service, index) => (

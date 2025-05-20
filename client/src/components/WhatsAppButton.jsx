@@ -1,4 +1,4 @@
-import { FaWhatsapp } from "react-icons/fa"  
+import { FaWhatsapp } from "react-icons/fa"
 
 const WhatsAppButton = () => (
     <a
@@ -9,6 +9,9 @@ const WhatsAppButton = () => (
     >
         <FaWhatsapp size={20} />
     </a>
-)  
+)
 
-export default WhatsAppButton  
+export default WhatsAppButton
+
+
+

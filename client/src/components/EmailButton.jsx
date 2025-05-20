@@ -1,12 +1,14 @@
-import { FaEnvelope } from "react-icons/fa"  
+import { FaEnvelope } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const EmailButton = () => (
-    <a
-        href="mailto:info@albonypress.com"
-        className="fixed bottom-20 left-4 bg-yellow-500 text-white p-3 rounded-full shadow-lg hover:bg-yellow-600 transition"
+    <Link
+        to="/contact"
+        className="fixed bottom-20 left-4 bg-yellow-500 text-white p-3 rounded-full shadow-lg hover:bg-yellow-600 transition z-50"
+        aria-label="Go to Contact Page"
     >
         <FaEnvelope size={20} />
-    </a>
-)  
+    </Link>
+);
 
-export default EmailButton  
+export default EmailButton;

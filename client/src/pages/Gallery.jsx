@@ -63,10 +63,10 @@ const Gallery = () => {
                         "url('https://images.unsplash.com/photo-1519337265831-281ec6cc8514?auto=format&fit=crop&w=1470&q=80')",
                 }}
             >
-                <div className="aabsolute inset-0 bg-black/100" />
+                <div className="absolute inset-0 bg-black/60" />
                 <motion.div
                     className="relative z-10 text-center px-6 max-w-3xl text-white"
-                    initial={{ opacity: 0, y: -30 }} // upar se animate karna
+                    initial={{ opacity: 0, y: 60 }} // upar se animate karna
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                 >

@@ -48,7 +48,7 @@ const OurServices = () => {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     className="text-4xl font-extrabold mb-16 tracking-wide"
                 >
                     Our Services
@@ -57,7 +57,7 @@ const OurServices = () => {
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     variants={{
                         visible: {
                             transition: {

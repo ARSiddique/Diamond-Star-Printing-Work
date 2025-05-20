@@ -1,5 +1,14 @@
-import React, { useState } from "react"  
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react"  
+import React, { useState } from "react";
+import axios from "axios";
+import {
+    Mail,
+    Phone,
+    MapPin,
+    Facebook,
+    Twitter,
+    Instagram,
+    Linkedin,
+} from "lucide-react";
 
 const ContactUs = () => {
     const [formData, setFormData] = useState({
@@ -7,43 +16,64 @@ const ContactUs = () => {
         email: "",
         subject: "",
         message: "",
-    })  
+    });
 
-    const [status, setStatus] = useState(null)  
+    const [status, setStatus] = useState(null);
 
     const handleChange = (e) =>
-        setFormData({ ...formData, [e.target.name]: e.target.value })  
+        setFormData({ ...formData, [e.target.name]: e.target.value });
 
-    const handleSubmit = (e) => {
-        e.preventDefault()  
-        setStatus("Thank you! We'll get back to you soon.")  
-        setFormData({ name: "", email: "", subject: "", message: "" })  
-    }  
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post(
+                `${import.meta.env.VITE_API_BASE_URL}/contact`,
+                formData
+              );
+
+            if (response.status === 200) {
+                setStatus("Thank you! We'll get back to you soon.");
+                setFormData({ name: "", email: "", subject: "", message: "" });
+            } else {
+                setStatus("Something went wrong. Please try again.");
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            setStatus("An error occurred. Please try again.");
+        }
+    };
 
     return (
         <div className="w-full">
-            {/* HERO SECTION */}
-            <div
-                className="relative w-full h-[90vh] bg-cover bg-center"
-                style={{
-                    backgroundImage: "url('/contact-hero.jpg')", // place image in /public
-                }}
-            >
-                <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-center text-white px-4">
+            {/* Hero Section */}
+            {/* Hero Section */}
+            <div className="relative w-full h-[90vh]">
+                {/* Background Image */}
+                <div
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: "url('/contact-hero.jpg')" }}
+                ></div>
+
+                {/* Black Overlay */}
+                <div className="absolute inset-0 bg-black opacity-40"></div>
+
+                {/* Content */}
+                <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
                     <h1 className="text-4xl md:text-6xl font-bold mb-4">Contact Us</h1>
                     <p className="text-lg max-w-xl">
-                        We’d love to hear from you. Reach out using the form below or the contact details.
+                        We’d love to hear from you. Reach out using the form below or the
+                        contact details.
                     </p>
                 </div>
             </div>
 
 
-            {/* Form & Info */}
+            {/* Form and Info Section */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 mx-6 md:mx-20 mb-20">
                 {/* Contact Form */}
                 <form
                     onSubmit={handleSubmit}
-                    className="bg-[#0f1e44] text-white p-8 rounded-xl shadow-lg space-y-6 transition-all duration-500"
+                    className="bg-[#0f1e44] text-white p-8 rounded-xl shadow-lg space-y-6"
                 >
                     <div>
                         <label className="block mb-1 font-medium">Name</label>
@@ -142,7 +172,7 @@ const ContactUs = () => {
             {/* Map */}
             <div className="rounded-lg overflow-hidden shadow-lg mb-20">
                 <iframe
-                    title="Diamond Star Printing Works Press Location"
+                    title="Al Bony Press Location"
                     src="https://www.google.com/maps/embed?pb=..."
                     width="100%"
                     height="300"
@@ -153,7 +183,7 @@ const ContactUs = () => {
                 ></iframe>
             </div>
         </div>
-    )  
-}  
+    );
+};
 
-export default ContactUs  
+export default ContactUs;

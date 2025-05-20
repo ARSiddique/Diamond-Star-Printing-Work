@@ -1,9 +1,9 @@
-import { Swiper, SwiperSlide } from "swiper/react"  
-import { Autoplay, Pagination, Navigation } from "swiper/modules"  
-import "swiper/css"  
-import "swiper/css/pagination"  
-import "swiper/css/navigation"  
-import { motion } from "framer-motion"  
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Autoplay, Pagination, Navigation } from "swiper/modules"
+import "swiper/css"
+import "swiper/css/pagination"
+import "swiper/css/navigation"
+import { motion } from "framer-motion"
 
 const slides = [
     {
@@ -24,7 +24,7 @@ const slides = [
         subtitle: "Helping your ideas come to life in print",
         // cta: "View Our Work",
     },
-]  
+]
 
 const Hero = () => {
     return (
@@ -75,7 +75,7 @@ const Hero = () => {
                 ))}
             </Swiper>
         </section>
-    )  
-}  
+    )
+}
 
 export default Hero  
