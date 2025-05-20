@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import { Link } from "react-router-dom";
+
 
 const images = [
     {
@@ -226,9 +228,12 @@ const Gallery = () => {
                 <p className="text-xl mb-4 font-semibold">
                     Interested in seeing more? Reach out to us for details!
                 </p>
-                <button className="bg-blue-600 text-white px-8 py-3 rounded hover:bg-yellow-500 hover:text-blue-800 transition duration-300 shadow-lg">
-                    Contact Us
-                </button>
+
+                <Link to="/contact">
+                    <button className="bg-blue-600 text-white px-8 py-3 rounded hover:bg-yellow-500 hover:text-blue-800 transition duration-300 shadow-lg">
+                        Contact Us
+                    </button>
+                </Link>
             </motion.section>
         </div>
     )

@@ -1,35 +1,24 @@
-import { useState } from "react"  
-import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from "react-leaflet"  
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa"  
-import "leaflet/dist/leaflet.css"  
-import L from "leaflet"  
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import "leaflet/dist/leaflet.css";
+import L from "leaflet";
 
 // Fix Leaflet default icon issue
-delete L.Icon.Default.prototype._getIconUrl  
+delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
-    iconRetinaUrl:
-        "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png",
-    iconUrl:
-        "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
-    shadowUrl:
-        "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
-})  
+    iconRetinaUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png",
+    iconUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
+    shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
+});
 
 const LocationMarker = () => {
-    const [position, setPosition] = useState([25.276987, 55.296249])   // Dubai default
-
-    useMapEvents({
-        click(e) {
-            setPosition([e.latlng.lat, e.latlng.lng])  
-        },
-    })  
-
-    return position === null ? null : (
+    const position = [24.3346, 54.5135]; // Musaffah M14, Abu Dhabi
+    return (
         <Marker position={position}>
-            <Popup>Your selected location</Popup>
+            <Popup>Diamond Star Printing - Musaffah M14</Popup>
         </Marker>
-    )  
-}  
+    );
+};
 
 const Footer = () => {
     return (
@@ -37,11 +26,7 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
                 {/* Logo & About */}
                 <div>
-                    <img
-                        src="/logo.png"
-                        alt="Company Logo"
-                        className=" h-10 mb-4"
-                    />
+                    <img src="/logo.png" alt="Company Logo" className="h-10 mb-4" />
                     <span className="text-lg md:text-lg font-bold tracking-wide">
                         Diamond Star Printing Works
                     </span>
@@ -55,10 +40,11 @@ const Footer = () => {
                 {/* Contact Info */}
                 <div>
                     <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
-                    <p className="mb-2">123 Printing St, Dubai, UAE</p>
-                    <p className="mb-2">Phone: +971 55 123 4567</p>
-                    <p className="mb-2">Email: info@yourcompany.com</p>
-                    <p>Mon - Fri, 9:00 AM - 6:00 PM</p>
+                    <p className="mb-2">Musaffah M14, Abu Dhabi, UAE</p>
+                    <p className="mb-2">Mobile: Ms. Tasneem - 054 4511100</p>
+                    <p className="mb-2">Mobile: Mohammad Rashid - 050 581 0345 / 055 9451345</p>
+                    <p className="mb-2">Office Tel: +971 2 5538731</p>
+                    <p className="mb-2">Email: diamoond.star@gmail.com</p>
                 </div>
 
                 {/* Social Media */}
@@ -83,13 +69,13 @@ const Footer = () => {
                 {/* Map */}
                 <div className="h-48 rounded-lg overflow-hidden shadow-lg">
                     <MapContainer
-                        center={[25.276987, 55.296249]} // Dubai coordinates default
+                        center={[24.3346, 54.5135]}
                         zoom={13}
                         scrollWheelZoom={false}
                         style={{ height: "100%", width: "100%" }}
                     >
                         <TileLayer
-                            attribution='&copy   <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+                            attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         />
                         <LocationMarker />
@@ -98,10 +84,10 @@ const Footer = () => {
             </div>
 
             <div className="text-center mt-10 text-gray-400 text-sm">
-                &copy   {new Date().getFullYear()} Your Company. All rights reserved.
+                &copy; {new Date().getFullYear()} Diamond Star Printing. All rights reserved.
             </div>
         </footer>
-    )  
-}  
+    );
+};
 
-export default Footer  
+export default Footer;

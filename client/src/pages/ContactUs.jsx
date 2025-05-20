@@ -29,7 +29,7 @@ const ContactUs = () => {
             const response = await axios.post(
                 `${import.meta.env.VITE_API_BASE_URL}/contact`,
                 formData
-              );
+            );
 
             if (response.status === 200) {
                 setStatus("Thank you! We'll get back to you soon.");
@@ -46,27 +46,19 @@ const ContactUs = () => {
     return (
         <div className="w-full">
             {/* Hero Section */}
-            {/* Hero Section */}
             <div className="relative w-full h-[90vh]">
-                {/* Background Image */}
                 <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{ backgroundImage: "url('/contact-hero.jpg')" }}
                 ></div>
-
-                {/* Black Overlay */}
                 <div className="absolute inset-0 bg-black opacity-40"></div>
-
-                {/* Content */}
                 <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
                     <h1 className="text-4xl md:text-6xl font-bold mb-4">Contact Us</h1>
                     <p className="text-lg max-w-xl">
-                        We’d love to hear from you. Reach out using the form below or the
-                        contact details.
+                        We'd love to hear from you. Reach out using the form below or the contact details.
                     </p>
                 </div>
             </div>
-
 
             {/* Form and Info Section */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 mx-6 md:mx-20 mb-20">
@@ -140,7 +132,9 @@ const ContactUs = () => {
                         <Phone className="text-blue-600" />
                         <div>
                             <h3 className="font-bold text-lg">Phone</h3>
-                            <p>+92 300 1234567</p>
+                            <p>Ms. Tasneem - 054 4511100</p>
+                            <p>Mohammad Rashid - 050 581 0345 / 055 9451345</p>
+                            <p>Office Tel: +971 2 5538731</p>
                         </div>
                     </div>
 
@@ -148,7 +142,7 @@ const ContactUs = () => {
                         <Mail className="text-blue-600" />
                         <div>
                             <h3 className="font-bold text-lg">Email</h3>
-                            <p>info@albonypress.com</p>
+                            <p>diamoond.star@gmail.com</p>
                         </div>
                     </div>
 
@@ -156,7 +150,7 @@ const ContactUs = () => {
                         <MapPin className="text-blue-600" />
                         <div>
                             <h3 className="font-bold text-lg">Address</h3>
-                            <p>123 Printing Street, Lahore, Pakistan</p>
+                            <p>Musaffah M14, Abu Dhabi, UAE</p>
                         </div>
                     </div>
 
@@ -172,8 +166,8 @@ const ContactUs = () => {
             {/* Map */}
             <div className="rounded-lg overflow-hidden shadow-lg mb-20">
                 <iframe
-                    title="Al Bony Press Location"
-                    src="https://www.google.com/maps/embed?pb=..."
+                    title="Diamond Star Printing Location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.173964046358!2d54.510966274435525!3d24.334673063172547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e3bc5af47835f%3A0x3f8c18b6fc6e3cb0!2sMusaffah%20M-14%20-%20Abu%20Dhabi!5e0!3m2!1sen!2sae!4v1716222200000!5m2!1sen!2sae"
                     width="100%"
                     height="300"
                     style={{ border: 0 }}
