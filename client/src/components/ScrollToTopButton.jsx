@@ -15,7 +15,7 @@ const ScrollToTopButton = () => {
     return visible ? (
         <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="fixed bottom-24 right-4 z-50 bg-blue-800 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition"
+            className="fixed bottom-24 right-4 z-50 bg-yellow-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition"
         >
             <FaArrowUp />
         </button>

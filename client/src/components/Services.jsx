@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"  
+import { motion } from "framer-motion"
 import DPH from "../assets/services/DigitalPrintingH.jpg"
 import OPH from "../assets/services/OffsetPrintingH.jpg"
 import SPH from "../assets/services/ScreenPrintingH.jpg"
@@ -38,11 +38,11 @@ const services = [
         desc: "Custom packaging for retail and luxury products.",
         img: ISH,
     }
-]  
+]
 
 const OurServices = () => {
     return (
-        <section className="bg-gradient-to-r from-blue-100 to-blue-200 py-20 text-blue-900">
+        <section className="bg-gradient-to-r from-blue-100 to-blue-200 py-20 text-blue-900 select-none">
             <div className="max-w-7xl mx-auto px-6 text-center">
                 <motion.h2
                     initial={{ opacity: 0, y: 30 }}
@@ -66,7 +66,7 @@ const OurServices = () => {
                         },
                         hidden: {},
                     }}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-10"
+                    className="grid grid-cols-1 md:grid-cols-3 gap-10 select-none"
                 >
                     {services.map((service, i) => (
                         <motion.div
@@ -75,25 +75,25 @@ const OurServices = () => {
                                 hidden: { opacity: 0, y: 40 },
                                 visible: { opacity: 1, y: 0 },
                             }}
-                            className="bg-blue-700 rounded-xl shadow-lg overflow-hidden cursor-pointer hover:shadow-2xl hover:-translate-y-2 transition-transform duration-500"
+                            className="bg-blue-700 rounded-xl shadow-lg overflow-hidden cursor-pointer hover:shadow-2xl hover:-translate-y-2 transition-transform duration-500 select-none"
                         >
                             <img
                                 src={service.img}
                                 alt={service.title}
-                                className="w-full h-48 object-cover"
+                                className="w-full h-48 object-cover select-none"
                             />
                             <div className="p-6">
-                                <h3 className="text-2xl font-semibold mb-3 text-yellow-400">
+                                <h3 className="text-2xl font-semibold mb-3 text-yellow-400 select-none">
                                     {service.title}
                                 </h3>
-                                <p className="text-gray-300 text-base">{service.desc}</p>
+                                <p className="text-gray-300 text-base select-none">{service.desc}</p>
                             </div>
                         </motion.div>
                     ))}
                 </motion.div>
             </div>
         </section>
-    )  
-}  
+    )
+}
 
 export default OurServices  

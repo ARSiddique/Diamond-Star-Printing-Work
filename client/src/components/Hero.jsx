@@ -44,12 +44,13 @@ const Hero = () => {
                             style={{ backgroundImage: `url(${slide.image})` }}
                         >
                             <div className="absolute inset-0 bg-black/50 z-10" />
-                            <div className="relative z-20 h-full flex flex-col justify-center items-start max-w-6xl mx-auto px-6 text-white">
+                            <div className="relative z-20 h-full flex flex-col justify-center items-center text-center px-4 md:px-6 text-white">
+
                                 <motion.h1
                                     initial={{ y: 30, opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
                                     transition={{ duration: 0.7 }}
-                                    className="text-4xl md:text-6xl font-bold leading-tight mb-4"
+                                    className="text-3xl md:text-6xl font-bold leading-tight mb-4"
                                 >
                                     {slide.title}
                                 </motion.h1>
@@ -57,7 +58,7 @@ const Hero = () => {
                                     initial={{ y: 20, opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
                                     transition={{ delay: 0.2, duration: 0.6 }}
-                                    className="text-lg md:text-xl mb-6 max-w-xl"
+                                    className="text-base md:text-xl mb-6 max-w-md md:max-w-xl"
                                 >
                                     {slide.subtitle}
                                 </motion.p>
