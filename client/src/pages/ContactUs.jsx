@@ -3,12 +3,9 @@ import axios from "axios";
 import {
     Mail,
     Phone,
-    MapPin,
-    Facebook,
-    Twitter,
-    Instagram,
-    Linkedin,
+    MapPin
 } from "lucide-react";
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const ContactUs = () => {
     const [formData, setFormData] = useState({
@@ -131,9 +128,9 @@ const ContactUs = () => {
                     <div className="flex gap-4 items-start">
                         <Phone className="text-blue-600" />
                         <div>
-                            <h3 className="font-bold text-lg">Phone</h3>
-                            <p>Ms. Tasneem - 054 4511100</p>
-                            <p>Mohammad Rashid - 050 581 0345 / 055 9451345</p>
+                            <h3 className="font-bold text-lg">Phone</h3><br />
+                            <p>Ms. Tasneem <br /> +971 54 4511100</p><br />
+                            <p>Mohammad Rashid <br /> +971 50 581 0345 <br /> +971 55 9451345</p><br />
                             <p>Office Tel: +971 2 5538731</p>
                         </div>
                     </div>
@@ -154,11 +151,22 @@ const ContactUs = () => {
                         </div>
                     </div>
 
-                    <div className="flex gap-6 pt-4 text-blue-600 text-xl">
-                        <a href="#"><Facebook /></a>
-                        <a href="#"><Twitter /></a>
-                        <a href="#"><Instagram /></a>
-                        <a href="#"><Linkedin /></a>
+                    <div>
+                        <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
+                        <div className="flex space-x-5 text-gray-300 text-2xl">
+                            <a href="https://www.facebook.com/dspw2006/" target="_blank" aria-label="Facebook" className="text-blue-600 hover:text-blue-300">
+                                <FaFacebookF />
+                            </a>
+                            {/* <a href="#" aria-label="Twitter" className="hover:text-blue-400">
+                            <FaTwitter />
+                        </a> */}
+                            <a href="https://www.instagram.com/diamondstar_printingworks/ " target="_blank" aria-label="Instagram" className=" text-blue-600    hover:text-pink-500">
+                                <FaInstagram />
+                            </a>
+                            <a href="https://www.linkedin.com/in/diamondstar2001/" target="_blank" aria-label="LinkedIn" className="text-blue-600 hover:text-blue-400">
+                                <FaLinkedinIn />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

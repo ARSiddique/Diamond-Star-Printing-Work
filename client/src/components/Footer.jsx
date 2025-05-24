@@ -42,8 +42,8 @@ const Footer = () => {
                     <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
                     <p className="mb-2">Musaffah M14, Abu Dhabi, UAE</p>
                     <p className="mb-2">Mobile Numbers: <br /> Ms. Tasneem <br /> +971 54 4511100</p>
-                    <p className="mb-2"> Mohammad Rashid <br />(+971) 50 581 0345 <br />(+971) 55 9451345</p>
-                    <p className="mb-2">Office Tel: (+971) 2 5538731</p>
+                    <p className="mb-2"> Mohammad Rashid <br />+971 50 581 0345 <br />+971 55 9451345</p>
+                    <p className="mb-2">Office Tel: +971 2 5538731</p>
                     <p className="mb-2">Email: diamoond.star@gmail.com</p>
                 </div>
 
@@ -51,16 +51,16 @@ const Footer = () => {
                 <div>
                     <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
                     <div className="flex space-x-5 text-gray-300 text-2xl">
-                        <a href="#" aria-label="Facebook" className="hover:text-blue-500">
+                        <a href="https://www.facebook.com/dspw2006/" target="_blank" aria-label="Facebook" className="hover:text-blue-500">
                             <FaFacebookF />
                         </a>
-                        <a href="#" aria-label="Twitter" className="hover:text-blue-400">
+                        {/* <a href="#" aria-label="Twitter" className="hover:text-blue-400">
                             <FaTwitter />
-                        </a>
-                        <a href="#" aria-label="Instagram" className="hover:text-pink-500">
+                        </a> */}
+                        <a href="https://www.instagram.com/diamondstar_printingworks/ " target="_blank" aria-label="Instagram" className="hover:text-pink-500">
                             <FaInstagram />
                         </a>
-                        <a href="#" aria-label="LinkedIn" className="hover:text-blue-700">
+                        <a href="https://www.linkedin.com/in/diamondstar2001/" target="_blank" aria-label="LinkedIn" className="hover:text-blue-700">
                             <FaLinkedinIn />
                         </a>
                     </div>
