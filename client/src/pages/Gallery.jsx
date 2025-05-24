@@ -200,19 +200,19 @@ const Gallery = () => {
                 transition={{ duration: 0.8 }}
             >
                 <div>
-                    <h3 className="text-4xl font-bold text-blue-600">50+</h3>
+                    <h3 className="text-4xl font-bold text-blue-600">322+</h3>
                     <p className="text-gray-600 mt-2">Projects Completed</p>
                 </div>
                 <div>
-                    <h3 className="text-4xl font-bold text-blue-600">10</h3>
+                    <h3 className="text-4xl font-bold text-blue-600">20+</h3>
                     <p className="text-gray-600 mt-2">Years in Business</p>
                 </div>
                 <div>
-                    <h3 className="text-4xl font-bold text-blue-600">50+</h3>
+                    <h3 className="text-4xl font-bold text-blue-600">200+</h3>
                     <p className="text-gray-600 mt-2">Happy Clients</p>
                 </div>
                 <div>
-                    <h3 className="text-4xl font-bold text-blue-600">10</h3>
+                    <h3 className="text-4xl font-bold text-blue-600">24+</h3>
                     <p className="text-gray-600 mt-2">Machines Installed</p>
                 </div>
             </motion.section>
