@@ -24,7 +24,7 @@ const AboutUs = () => {
                         About <br /> Diamond Star Printing Works
                     </h1>
                     <p className="text-lg max-w-2xl mx-auto">
-                        Serving the UAE with world-class printing for over 25 years.
+                        Serving the UAE with world-class printing for over 10 years.
                     </p>
                 </motion.div>
             </section>
