@@ -21,7 +21,7 @@ const AboutUs = () => {
                     transition={{ duration: 0.9 }}
                 >
                     <h1 className="text-5xl font-bold mb-4 drop-shadow-lg">
-                        About Diamond Star Printing Works Printing Press
+                        About <br /> Diamond Star Printing Works
                     </h1>
                     <p className="text-lg max-w-2xl mx-auto">
                         Serving the UAE with world-class printing for over 25 years.
