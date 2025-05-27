@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"  
+import { motion } from "framer-motion"
 import DPPH from "../assets/products/DPPH.jpg"
 import CPH from "../assets/products/CPH.jpg"
 import PPH from "../assets/products/PPH.jpg"
@@ -6,20 +6,21 @@ import PPH from "../assets/products/PPH.jpg"
 const products = [
     {
         title: "Commercial Products",
-        desc: "Books, brochures, cards, calendars & more for business use.",
+        desc: "We offer a wide range of commercial print products including books, brochures, business cards, calendars, and catalogs. Each product is tailored for maximum professional impact. Perfect for offices, events, marketing, and corporate communication.",
         img: CPH,
     },
     {
         title: "Packaging Products",
-        desc: "Rigid boxes, shopping bags, luxury packaging solutions.",
+        desc: "Custom-designed rigid boxes, eco-friendly shopping bags, and premium packaging options to elevate your brand. Ideal for retail, luxury, and gifting industries. Our packaging solutions combine aesthetics with structural integrity.",
         img: PPH,
     },
     {
         title: "Digital Printing",
-        desc: "Posters, banners, window graphics, floor graphics & more.",
+        desc: "High-resolution posters, banners, window graphics, floor graphics, and more — printed with precision. Perfect for indoor and outdoor promotions. Fast turnaround and vibrant quality guaranteed for impactful marketing.",
         img: DPPH,
-    },
-]  
+    }
+]
+
 
 const Products = () => {
     return (
@@ -54,7 +55,7 @@ const Products = () => {
                                 <h3 className="text-2xl font-bold text-yellow-400 mb-3">
                                     {product.title}
                                 </h3>
-                                <p className="text-gray-300 text-base leading-relaxed">
+                                <p className="text-gray-300 text-base leading-relaxed text-justify hyphens-auto">
                                     {product.desc}
                                 </p>
                             </div>
@@ -63,7 +64,7 @@ const Products = () => {
                 </div>
             </div>
         </section>
-    )  
-}  
+    )
+}
 
 export default Products  
