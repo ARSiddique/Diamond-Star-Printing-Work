@@ -7,19 +7,19 @@ import { motion } from "framer-motion"
 
 const slides = [
     {
-        image: "/hero/slide1.jpg",
+        video: "/hero/slide1.mp4",
         title: "Premium Commercial Printing",
         subtitle: "Where quality meets creativity in every print",
         // cta: "Get in Touch",
     },
     {
-        image: "/hero/slide2.jpg",
+        video: "/hero/slide2.mp4",
         title: "Custom Packaging Solutions",
         subtitle: "Elevate your brand with standout packaging",
         // cta: "Request a Quote",
     },
     {
-        image: "/hero/slide3.jpg",
+        video: "/hero/slide3.mp4",
         title: "Professional Print Services",
         subtitle: "Helping your ideas come to life in print",
         // cta: "View Our Work",
@@ -28,24 +28,28 @@ const slides = [
 
 const Hero = () => {
     return (
-        <section className="relative w-full h-[90vh] select-none">
+        <section className="relative w-full h-[90vh] select-none overflow-hidden">
             <Swiper
                 modules={[Autoplay, Pagination, Navigation]}
                 loop={true}
-                autoplay={{ delay: 5000 }}
+                autoplay={{ delay: 7000 }}
                 pagination={{ clickable: true }}
                 navigation
                 className="h-full"
             >
                 {slides.map((slide, i) => (
                     <SwiperSlide key={i}>
-                        <div
-                            className="w-full h-full bg-cover bg-center relative"
-                            style={{ backgroundImage: `url(${slide.image})` }}
-                        >
+                        <div className="w-full h-full relative">
+                            <video
+                                className="absolute top-0 left-0 w-full h-full object-cover"
+                                src={slide.video}
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                            />
                             <div className="absolute inset-0 bg-black/50 z-10" />
                             <div className="relative z-20 h-full flex flex-col justify-center items-center text-center px-4 md:px-6 text-white">
-
                                 <motion.h1
                                     initial={{ y: 30, opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
@@ -62,14 +66,16 @@ const Hero = () => {
                                 >
                                     {slide.subtitle}
                                 </motion.p>
-                                <motion.button
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{ delay: 0.4 }}
-                                    className="bg-primary hover:bg-accent transition px-6 py-3 rounded-md text-white font-medium"
-                                >
-                                    {slide.cta}
-                                </motion.button>
+                                {slide.cta && (
+                                    <motion.button
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        transition={{ delay: 0.4 }}
+                                        className="bg-primary hover:bg-accent transition px-6 py-3 rounded-md text-white font-medium"
+                                    >
+                                        {slide.cta}
+                                    </motion.button>
+                                )}
                             </div>
                         </div>
                     </SwiperSlide>
@@ -79,4 +85,4 @@ const Hero = () => {
     )
 }
 
-export default Hero  
+export default Hero
