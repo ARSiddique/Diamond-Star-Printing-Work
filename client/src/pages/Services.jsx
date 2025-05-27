@@ -17,56 +17,56 @@ const services = [
         id: "digital-printing",
         title: "Digital Printing",
         description:
-            "Delivering sharp, vibrant prints on demand. Ideal for small to medium runs with fast turnaround. From brochures to flyers and cards, digital printing ensures precision and clarity.",
+            "Delivering sharp, vibrant prints on demand using advanced digital technology. Perfect for brochures, business cards, flyers, and short-run prints with quick turnaround. This method ensures consistency and clarity, even with variable data printing. Ideal for businesses that need high-quality marketing materials without bulk orders.",
         image: DPS,
     },
     {
         id: "offset-printing",
         title: "Offset Printing",
         description:
-            "Cost-effective and premium quality for bulk jobs. Offset printing delivers consistent results with vivid colors and excellent sharpness—perfect for magazines, catalogs, and large-scale material.",
+            "Offset printing provides exceptional quality and cost efficiency for large-volume jobs. It’s the go-to solution for magazines, catalogs, posters, and stationery. With precise color control and sharp image reproduction, this traditional method guarantees a professional finish. Best suited for high-quantity, high-quality projects.",
         image: OPS,
     },
     {
         id: "screen-printing",
         title: "Screen Printing",
         description:
-            "Ideal for packaging, textiles, and industrial materials. Our screen printing brings durability and striking visuals—great for high-impact visuals on a variety of surfaces.",
+            "Our screen printing services cater to packaging, textiles, labels, and promotional materials. Known for its vibrant inks and durability, this technique delivers bold designs on a wide range of surfaces. It’s perfect for large, striking visuals where longevity matters. We ensure consistency across every print run.",
         image: SPS,
     },
     {
         id: "car-wrapping",
         title: "Car Wrapping",
         description:
-            "Advertise while you move. Our car wraps turn any vehicle into a mobile billboard with attention-grabbing designs that last.",
+            "Turn your vehicle into a moving advertisement with our custom car wraps. Designed to be weather-resistant and visually striking, our wraps offer branding on the go. Whether partial or full-body wraps, we use high-quality materials for a sleek, professional finish. Ideal for businesses looking to maximize street-level visibility.",
         image: CWS,
     },
     {
         id: "signboards",
         title: "Signboards",
         description:
-            "Stand out with our custom signboards. Built for all environments, our boards command attention in both indoor and outdoor settings.",
+            "Make a lasting first impression with our customized signboards, perfect for both indoor and outdoor use. We create signage that stands up to harsh weather and delivers high visual impact. From retail to corporate spaces, our signs boost brand presence. Choose from illuminated, acrylic, metal, or wooden signs tailored to your needs.",
         image: SBS,
     },
     {
         id: "indoor-signages",
         title: "Indoor Signages",
         description:
-            "Professional and sleek interior signage. Perfect for office branding, exhibitions, and promotional displays.",
+            "Create visually cohesive and professional interior environments with our indoor signage solutions. From reception signs to directional and promotional displays, we cover it all. Designed to enhance brand identity and user navigation, our signs fit seamlessly into any workspace or showroom. Printed on high-quality substrates with sharp finishes.",
         image: IDSS,
     },
     {
         id: "stickers",
         title: "Stickers",
         description:
-            "Fun, functional, and fully customizable. Our stickers are perfect for branding, packaging, or promotional giveaways.",
+            "Stickers are a creative and cost-effective branding tool. We offer custom shapes, finishes, and adhesive strengths suitable for packaging, laptops, events, and giveaways. Available in matte, gloss, and transparent styles to suit your design. Whether for fun or business, our stickers stick with your audience.",
         image: SS,
     },
     {
         id: "banners",
         title: "Banners",
         description:
-            "Large-format banners designed to impress. Durable, weather-resistant, and perfect for events, sales, and promotions.",
+            "Command attention with our high-impact, large-format banners designed for indoor and outdoor use. Made with durable, weather-resistant materials, they’re perfect for promotions, events, grand openings, or advertising. Choose from roll-up, mesh, vinyl, and fabric banners for a solution that suits your campaign.",
         image: BS,
     },
 ];
@@ -97,6 +97,23 @@ const Services = () => {
                 </motion.div>
             </section>
 
+            {/* Services Intro Paragraph Section */}
+            <section className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 py-20 px-6 text-white mt-16 text-center select-none">
+                <motion.div
+                    className="max-w-4xl mx-auto"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false }}
+                    transition={{ duration: 0.8 }}
+                >
+                    <h2 className="text-4xl font-bold mb-6">Your One-Stop Printing Solution</h2>
+                    <p className="text-lg leading-relaxed text-gray-100">
+                        At Diamond Star Printing Works, we offer a wide range of printing services tailored to meet the diverse needs of businesses and individuals alike. From high-definition digital prints and large-scale offset jobs to eye-catching banners, wraps, and promotional materials, our solutions combine innovation, quality, and affordability. Whether you're branding your business, launching a campaign, or simply need premium printed products, we've got you covered with precision and care.
+                    </p>
+                </motion.div>
+            </section>
+
+
             {/* Services Section */}
             {services.map((service, index) => (
                 <section
@@ -126,7 +143,7 @@ const Services = () => {
                             className="w-full md:w-1/2 text-center md:text-left"
                             initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: false }}
                             transition={{ duration: 0.6 }}
                         >
                             <h2 className="text-3xl font-bold text-blue-900 mb-4">
@@ -134,7 +151,7 @@ const Services = () => {
                                     {service.title}
                                 </Link>
                             </h2>
-                            <p className="text-gray-600 text-lg leading-relaxed">
+                            <p className="text-gray-600 text-lg leading-relaxed text-justify hyphens-auto">
                                 {service.description}
                             </p>
                             <Link
