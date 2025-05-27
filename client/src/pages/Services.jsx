@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
 import videoBg from "../assets/videos/about-hero.mp4"; // replace with your video
+import videoBgg from "../assets/videos/factory-tour.mp4"; // replace with your video
 import DPS from "../assets/services/DPS.jpg";
 import OPS from "../assets/services/OPS.jpg";
 import SPS from "../assets/services/SPS.jpg";
@@ -175,7 +176,7 @@ const Services = () => {
                     playsInline
                     className="absolute inset-0 w-full h-full object-cover z-0"
                 >
-                    <source src={videoBg} type="video/mp4" />
+                    <source src={videoBgg} type="video/mp4" />
                 </video>
 
                 {/* Dark overlay */}
@@ -195,7 +196,7 @@ const Services = () => {
                     </p>
                     <ul className="grid sm:grid-cols-2 gap-4 text-left text-white max-w-xl mx-auto text-lg">
                         <li className="flex items-center gap-2">
-                            <FaCheckCircle className="text-green-400" /> 25+ Years of Experience
+                            <FaCheckCircle className="text-green-400" /> 20+ Years of Experience
                         </li>
                         <li className="flex items-center gap-2">
                             <FaCheckCircle className="text-green-400" /> Custom Design Services

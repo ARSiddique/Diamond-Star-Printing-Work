@@ -19,7 +19,7 @@ const slides = [
         // cta: "Request a Quote",
     },
     {
-        video: "/hero/slide3.mp4",
+        video: "/hero/slide33.mp4",
         title: "Professional Print Services",
         subtitle: "Helping your ideas come to life in print",
         // cta: "View Our Work",
@@ -32,7 +32,7 @@ const Hero = () => {
             <Swiper
                 modules={[Autoplay, Pagination, Navigation]}
                 loop={true}
-                autoplay={{ delay: 7000 }}
+                autoplay={{ delay: 4000 }}
                 pagination={{ clickable: true }}
                 navigation
                 className="h-full"
