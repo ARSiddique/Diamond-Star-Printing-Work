@@ -3,9 +3,12 @@ import axios from "axios";
 import {
     Mail,
     Phone,
-    MapPin
+    MapPin,
+    Smile,
+    Headphones,
+    MessageCircle
 } from "lucide-react";
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const ContactUs = () => {
     const [formData, setFormData] = useState({
@@ -14,7 +17,6 @@ const ContactUs = () => {
         subject: "",
         message: "",
     });
-
     const [status, setStatus] = useState(null);
 
     const handleChange = (e) =>
@@ -27,7 +29,6 @@ const ContactUs = () => {
                 `${import.meta.env.VITE_API_BASE_URL}/contact`,
                 formData
             );
-
             if (response.status === 200) {
                 setStatus("Thank you! We'll get back to you soon.");
                 setFormData({ name: "", email: "", subject: "", message: "" });
@@ -42,22 +43,47 @@ const ContactUs = () => {
 
     return (
         <div className="w-full">
-            {/* Hero Section */}
-            <div className="relative w-full h-[90vh]">
-                <div
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: "url('/contact-hero.jpg')" }}
-                ></div>
-                <div className="absolute inset-0 bg-black opacity-40"></div>
+            {/* Hero Section with Video */}
+            <div className="relative w-full h-[90vh] overflow-hidden">
+                <video
+                    className="absolute w-full h-full object-cover"
+                    src="/contact-hero.mp4"
+                    autoPlay
+                    muted
+                    loop
+                ></video>
+                <div className="absolute inset-0 bg-black/50"></div>
                 <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
                     <h1 className="text-4xl md:text-6xl font-bold mb-4">Contact Us</h1>
                     <p className="text-lg max-w-xl">
-                        We'd love to hear from you. Reach out using the form below or the contact details.
+                        Reach out anytime — we’re here to help and support your journey.
                     </p>
                 </div>
             </div>
 
-            {/* Form and Info Section */}
+            {/* Why Contact Us Section */}
+            <section className="py-20 px-6 md:px-20 bg-white text-gray-800 text-center">
+                <h2 className="text-3xl md:text-4xl font-bold mb-10">Why Reach Out to Us?</h2>
+                <div className="grid md:grid-cols-3 gap-10">
+                    <div className="flex flex-col items-center">
+                        <Smile className="text-blue-600 mb-4" size={40} />
+                        <h3 className="font-bold text-xl">Friendly Support</h3>
+                        <p>Our team is ready to help with warmth and patience — every time.</p>
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <Headphones className="text-blue-600 mb-4" size={40} />
+                        <h3 className="font-bold text-xl">Quick Responses</h3>
+                        <p>We aim to respond within 24 hours on business days.</p>
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <MessageCircle className="text-blue-600 mb-4" size={40} />
+                        <h3 className="font-bold text-xl">Expert Guidance</h3>
+                        <p>Get answers from people who know our services inside and out.</p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Contact Form and Info Section */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 mx-6 md:mx-20 mb-20">
                 {/* Contact Form */}
                 <form
@@ -75,7 +101,6 @@ const ContactUs = () => {
                             className="w-full px-4 py-2 bg-white/10 border border-blue-500 rounded focus:outline-none placeholder-gray-300"
                         />
                     </div>
-
                     <div>
                         <label className="block mb-1 font-medium">Email</label>
                         <input
@@ -88,7 +113,6 @@ const ContactUs = () => {
                             className="w-full px-4 py-2 bg-white/10 border border-blue-500 rounded focus:outline-none placeholder-gray-300"
                         />
                     </div>
-
                     <div>
                         <label className="block mb-1 font-medium">Subject</label>
                         <input
@@ -99,7 +123,6 @@ const ContactUs = () => {
                             className="w-full px-4 py-2 bg-white/10 border border-blue-500 rounded focus:outline-none placeholder-gray-300"
                         />
                     </div>
-
                     <div>
                         <label className="block mb-1 font-medium">Message</label>
                         <textarea
@@ -112,9 +135,7 @@ const ContactUs = () => {
                             className="w-full px-4 py-2 bg-white/10 border border-blue-500 rounded focus:outline-none placeholder-gray-300 resize-none"
                         />
                     </div>
-
                     {status && <p className="text-green-400">{status}</p>}
-
                     <button
                         type="submit"
                         className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded transition"
@@ -134,7 +155,6 @@ const ContactUs = () => {
                             <p>Office Tel: +971 2 5538731</p>
                         </div>
                     </div>
-
                     <div className="flex gap-4 items-start">
                         <Mail className="text-blue-600" />
                         <div>
@@ -142,7 +162,6 @@ const ContactUs = () => {
                             <p>diamoond.star@gmail.com</p>
                         </div>
                     </div>
-
                     <div className="flex gap-4 items-start">
                         <MapPin className="text-blue-600" />
                         <div>
@@ -150,17 +169,13 @@ const ContactUs = () => {
                             <p>Musaffah M14, Abu Dhabi, UAE</p>
                         </div>
                     </div>
-
                     <div>
                         <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
                         <div className="flex space-x-5 text-gray-300 text-2xl">
                             <a href="https://www.facebook.com/dspw2006/" target="_blank" aria-label="Facebook" className="text-blue-600 hover:text-blue-300">
                                 <FaFacebookF />
                             </a>
-                            {/* <a href="#" aria-label="Twitter" className="hover:text-blue-400">
-                            <FaTwitter />
-                        </a> */}
-                            <a href="https://www.instagram.com/diamondstar_printingworks/ " target="_blank" aria-label="Instagram" className=" text-blue-600    hover:text-pink-500">
+                            <a href="https://www.instagram.com/diamondstar_printingworks/" target="_blank" aria-label="Instagram" className="text-blue-600 hover:text-pink-500">
                                 <FaInstagram />
                             </a>
                             <a href="https://www.linkedin.com/in/diamondstar2001/" target="_blank" aria-label="LinkedIn" className="text-blue-600 hover:text-blue-400">
@@ -171,7 +186,7 @@ const ContactUs = () => {
                 </div>
             </div>
 
-            {/* Map */}
+            {/* Embedded Google Map */}
             <div className="rounded-lg overflow-hidden shadow-lg mb-20">
                 <iframe
                     title="Diamond Star Printing Location"

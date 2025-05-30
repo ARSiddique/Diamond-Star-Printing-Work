@@ -24,7 +24,7 @@ const products = [
 
 const Products = () => {
     return (
-        <section className="bg-blue-900 py-20">
+        <section className="bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-800 py-20">
             <div className="max-w-7xl mx-auto px-6">
                 <motion.h2
                     initial={{ opacity: 0, y: 40 }}
@@ -44,7 +44,7 @@ const Products = () => {
                             whileInView={{ opacity: 1, y: 0, scale: 1 }}
                             transition={{ duration: 0.7, delay: index * 0.15 }}
                             viewport={{ once: true }}
-                            className="bg-blue-800 rounded-2xl shadow-lg hover:shadow-yellow-400/50 hover:scale-[1.03] transition-transform duration-500 cursor-pointer overflow-hidden"
+                            className="bg-blue-700 rounded-2xl shadow-lg hover:shadow-yellow-400/50 hover:scale-[1.03] transition-transform duration-500 cursor-pointer overflow-hidden"
                         >
                             <img
                                 src={product.img}

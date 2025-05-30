@@ -35,14 +35,14 @@ const AboutUs = () => {
 
             {/* WHO WE ARE */}
             <motion.section
-                className="py-20 px-6 bg-[#0a2540] text-white text-justify mt-16"
+                className="py-20 px-6 bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-800 text-white "
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.9 }}
             >
                 <h2 className="text-4xl font-bold mb-6 text-center">Reimagining Print Excellence</h2>
-                <p className="text-lg max-w-5xl mx-auto leading-relaxed text-center">
+                <p className="text-lg max-w-5xl mx-auto leading-relaxed text-justify hyphens-auto">
                     For over a decade, Diamond Star Printing Works has led the UAE’s printing revolution with unwavering dedication to quality and innovation. We specialize in a wide range of services including packaging, promotional materials, commercial printing, and bespoke solutions tailored to meet unique client needs. Our commitment to eco-conscious practices combined with cutting-edge technology allows us to deliver products that not only impress but also support sustainable growth. Every project is treated with meticulous care by our experienced team, ensuring precision, vibrant color fidelity, and durability. With a focus on speed and reliability, we transform ideas into compelling printed narratives that help brands stand out in competitive markets.
                 </p>
             </motion.section>
@@ -51,7 +51,7 @@ const AboutUs = () => {
 
             {/* SECTION: IMAGE + TEXT */}
             <motion.section
-                className="py-20 bg-white"
+                className="py-20 bg-gradient-to-r from-blue-100 to-blue-200"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
@@ -83,7 +83,7 @@ const AboutUs = () => {
                     className="absolute inset-0 w-full h-full object-cover z-0 opacity-30"
                     src={videoPreview}
                 />
-                <div className="absolute inset-0 bg-[#0a2540]/80 z-10" />
+                <div className="absolute inset-0 bg-black/60" />
                 <motion.div
                     className="relative z-20 max-w-5xl mx-auto text-center px-4"
                     initial={{ opacity: 0, y: 40 }}
@@ -100,11 +100,11 @@ const AboutUs = () => {
                 </motion.div>
             </section>
 
-          
+
 
             {/* SECTION: IMAGE + TEXT (REVERSED) */}
             <motion.section
-                className="py-20 bg-[#f9f9f9]"
+                className="py-20 bg-gradient-to-r from-blue-100 to-blue-200"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
@@ -127,7 +127,7 @@ const AboutUs = () => {
 
             {/* SECTION: CTA */}
             <motion.section
-                className="py-16 bg-[#0a2540] text-center text-white"
+                className="py-16 bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-800 text-center text-white"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}

@@ -99,7 +99,7 @@ const Services = () => {
             </section>
 
             {/* Services Intro Paragraph Section */}
-            <section className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 py-20 px-6 text-white mt-16 text-center select-none">
+            <section className="bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-800 py-20 px-6 text-white text-center select-none">
                 <motion.div
                     className="max-w-4xl mx-auto"
                     initial={{ opacity: 0, y: 30 }}
@@ -119,8 +119,7 @@ const Services = () => {
             {services.map((service, index) => (
                 <section
                     key={service.id}
-                    className={`py-16 px-6 ${index % 2 === 0 ? "bg-white" : "bg-blue-50"
-                        }`}
+                    className={"py-16 px-6 bg-gradient-to-r from-blue-100 to-blue-200 "}
                 >
                     <div
                         className={`max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10 ${index % 2 !== 0 ? "md:flex-row-reverse" : ""
@@ -167,7 +166,7 @@ const Services = () => {
             ))}
 
             {/* Why Choose Us */}
-            <section className="relative h-auto mb-20 py-20 px-6 overflow-hidden text-white">
+            <section className="relative h-auto  py-20 px-6 overflow-hidden text-white">
                 {/* Background Video */}
                 <video
                     autoPlay

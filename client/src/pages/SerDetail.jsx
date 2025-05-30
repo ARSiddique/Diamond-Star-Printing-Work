@@ -1,5 +1,6 @@
 import React from 'react'  
 import { useParams, Link } from 'react-router-dom'  
+import { motion } from "framer-motion";
 
 const services = [
     {
@@ -7,20 +8,23 @@ const services = [
         title: "Digital Printing",
         description: "High-resolution digital prints for brochures, flyers, business cards, and more.",
         image: "/images/services/digital.jpg",
-        heroImage: "/images/services/digital-hero.jpg",
-        details: "Our digital printing technology delivers vibrant colors and sharp details. Ideal for short runs and quick turnaround times.",
+        heroImage: "/videos/digital-printing-hero.mp4",
+        details: "Our digital printing technology delivers vibrant colors and sharp details, ideal for short runs and quick turnaround times.",
         sections: [
             {
                 heading: "Why Choose Digital Printing?",
-                content: "Digital printing offers flexibility, quick proofing, and cost-effective short-run prints with high quality."
+                content: "Digital printing offers fast proofing, minimal setup, and vibrant output for small batches.",
+                video: "/videos/digital-why.mp4"
             },
             {
                 heading: "Applications",
-                content: "Brochures, flyers, posters, business cards, and customized marketing materials."
+                content: "Perfect for brochures, flyers, business cards, posters, and personalized stationery.",
+                image: "/images/services/digital-applications.jpg"
             },
             {
                 heading: "Our Process",
-                content: "We use the latest digital printers to ensure color accuracy and fast delivery."
+                content: "We utilize state-of-the-art digital presses to ensure accurate colors and sharp resolution.",
+                image: "/images/services/digital-process.jpg"
             }
         ]
     },
@@ -29,20 +33,23 @@ const services = [
         title: "Offset Printing",
         description: "Perfect for large volume print jobs with consistent quality and vibrant color reproduction.",
         image: "/images/services/offset.jpg",
-        heroImage: "/images/services/offset-hero.jpg",
-        details: "Offset printing is ideal for large-scale print runs offering excellent color fidelity and cost efficiency.",
+        heroImage: "/videos/offset-hero.mp4",
+        details: "Offset printing is ideal for high-volume production with exceptional image quality and cost-efficiency.",
         sections: [
             {
                 heading: "Advantages of Offset Printing",
-                content: "Superior image quality, cost efficiency for large quantities, and versatility on various substrates."
+                content: "Offers consistent color, precision detail, and is cost-effective for large runs.",
+                video: "/videos/offset-advantages.mp4"
             },
             {
-                heading: "Ideal For",
-                content: "Magazines, newspapers, books, brochures, and packaging."
+                heading: "Ideal Use Cases",
+                content: "Magazines, catalogs, books, and packaging with bulk requirements.",
+                image: "/images/services/offset-uses.jpg"
             },
             {
-                heading: "Quality Assurance",
-                content: "Our team ensures rigorous quality checks at every stage of the print process."
+                heading: "Press Setup & Quality Control",
+                content: "Our expert technicians ensure accurate plate alignment and ink density.",
+                image: "/images/services/offset-setup.jpg"
             }
         ]
     },
@@ -51,199 +58,236 @@ const services = [
         title: "Screen Printing",
         description: "Reliable screen printing solutions for packaging, apparel, and industrial applications.",
         image: "/images/services/screen.jpg",
-        heroImage: "/images/services/screen-hero.jpg",
-        details: "Screen printing provides excellent color vibrancy and durability, ideal for printing on various surfaces.",
+        heroImage: "/videos/screen-hero.mp4",
+        details: "Screen printing provides long-lasting, vibrant prints ideal for surfaces of various materials.",
         sections: [
             {
                 heading: "Benefits of Screen Printing",
-                content: "Long-lasting prints, rich color output, and suitable for irregular surfaces."
+                content: "Durable ink application and high vibrancy on textiles and flat surfaces.",
+                video: "/videos/screen-benefits.mp4"
             },
             {
-                heading: "Use Cases",
-                content: "T-shirts, bags, bottles, signage, packaging, and promotional items."
+                heading: "Product Types",
+                content: "T-shirts, tote bags, bottles, and industrial labeling.",
+                image: "/images/services/screen-products.jpg"
             },
             {
-                heading: "Technology We Use",
-                content: "We use both manual and automated screen presses to meet your quantity and quality needs."
+                heading: "Our Technology",
+                content: "Automated and manual screen presses to meet your scale and precision needs.",
+                image: "/images/services/screen-technology.jpg"
             }
         ]
     },
     {
         id: "car-wrapping",
         title: "Car Wrapping",
-        description: "Transform your vehicles into powerful moving advertisements with our custom wraps.",
+        description: "Transform your vehicles into moving billboards with our custom vinyl wraps.",
         image: "/images/services/carwrap.jpg",
-        heroImage: "/images/services/carwrap-hero.jpg",
-        details: "Car wraps are a cost-effective way to advertise while protecting your vehicle’s paint.",
+        heroImage: "/videos/carwrap-hero.mp4",
+        details: "Car wraps are perfect for mobile branding, allowing style and protection in one solution.",
         sections: [
             {
                 heading: "Why Wrap Your Vehicle?",
-                content: "Car wraps act as mobile billboards, increasing brand exposure on the go."
+                content: "Get high brand visibility and protect your vehicle’s paint from scratches and UV rays.",
+                video: "/videos/carwrap-benefits.mp4"
             },
             {
-                heading: "Customization Options",
-                content: "Full wraps, partial wraps, decals, matte, gloss, and textured finishes available."
+                heading: "Design Customization",
+                content: "Matte, gloss, color shift, and printed wraps customized to fit your brand.",
+                image: "/images/services/carwrap-designs.jpg"
             },
             {
-                heading: "Durability & Maintenance",
-                content: "Our wraps last for years with proper care and can be safely removed anytime."
+                heading: "Application Process",
+                content: "Our professionals ensure bubble-free installation with edge sealing for durability.",
+                image: "/images/services/carwrap-process.jpg"
             }
         ]
     },
     {
         id: "signboards",
         title: "Signboards",
-        description: "We create bold, durable signboards for both indoor and outdoor use.",
+        description: "We craft bold, weatherproof signboards for indoor and outdoor use.",
         image: "/images/services/signboard.jpg",
-        heroImage: "/images/services/signboard-hero.jpg",
-        details: "Signboards are essential for visibility and branding. We design and produce boards that last in all conditions.",
+        heroImage: "/videos/signboard-hero.mp4",
+        details: "Durable signboards made from premium materials that withstand weather and UV exposure.",
         sections: [
             {
-                heading: "Types of Signboards",
-                content: "Acrylic, LED-lit, metal, flex, and 3D letter signboards tailored to your brand."
+                heading: "Types We Offer",
+                content: "LED-lit boards, acrylic signs, flex boards, metal panels, and 3D lettering.",
+                image: "/images/services/signboard-types.jpg"
             },
             {
-                heading: "Installation Services",
-                content: "Professional on-site installation for optimal positioning and safety."
+                heading: "Professional Installation",
+                content: "We ensure proper alignment, safe mounting, and long-lasting visibility.",
+                video: "/videos/signboard-installation.mp4"
             },
             {
-                heading: "Weather Resistance",
-                content: "All signboards are made with UV and water-resistant materials for long-term outdoor use."
+                heading: "Custom Designs",
+                content: "Tailored to your business needs with brand colors and unique finishes.",
+                image: "/images/services/signboard-designs.jpg"
             }
         ]
     },
     {
         id: "indoor-signages",
         title: "Indoor Signages",
-        description: "Sleek and professional indoor signs for offices, exhibitions, and shops.",
+        description: "Modern indoor signs for offices, retail spaces, and showrooms.",
         image: "/images/services/indoor.jpg",
-        heroImage: "/images/services/indoor-hero.jpg",
-        details: "Our indoor signages enhance your workspace with professional and informative visuals.",
+        heroImage: "/videos/indoor-hero.mp4",
+        details: "Elevate your space with stylish signage solutions that reflect your branding.",
         sections: [
             {
-                heading: "Signage Types",
-                content: "Wall signs, name plates, directional signage, illuminated signs, and branding panels."
+                heading: "Signage Styles",
+                content: "Nameplates, directory boards, lightboxes, acrylic panels, and vinyl graphics.",
+                image: "/images/services/indoor-types.jpg"
             },
             {
-                heading: "Design & Branding",
-                content: "Tailored designs that reflect your business identity and interior aesthetics."
+                heading: "Brand Integration",
+                content: "We align signage aesthetics with your brand’s color and tone.",
+                video: "/videos/indoor-branding.mp4"
             },
             {
-                heading: "Applications",
-                content: "Offices, retail outlets, clinics, showrooms, and event venues."
+                heading: "Easy Maintenance",
+                content: "We use smudge-proof and easy-to-clean materials for longevity.",
+                image: "/images/services/indoor-maintenance.jpg"
             }
         ]
     },
     {
         id: "stickers",
         title: "Stickers",
-        description: "Custom-cut stickers for branding, promotions, packaging, and more.",
+        description: "High-quality stickers for packaging, branding, and promotional use.",
         image: "/images/services/stickers.jpg",
-        heroImage: "/images/services/stickers-hero.jpg",
-        details: "We offer custom stickers in all shapes and sizes with vibrant print and strong adhesive.",
+        heroImage: "/videos/stickers-hero.mp4",
+        details: "Vibrant, adhesive-backed stickers available in various shapes and materials.",
         sections: [
             {
-                heading: "Sticker Materials",
-                content: "Paper, vinyl, transparent, waterproof, glossy, matte, and more."
+                heading: "Material Options",
+                content: "Choose from waterproof vinyl, paper, clear film, or foil.",
+                image: "/images/services/stickers-materials.jpg"
             },
             {
-                heading: "Custom Shapes & Sizes",
-                content: "Die-cut, kiss-cut, square, round — fully customizable as per your needs."
+                heading: "Custom Shapes",
+                content: "Circle, square, die-cut, kiss-cut – all shapes supported.",
+                video: "/videos/stickers-cutting.mp4"
             },
             {
-                heading: "Use Cases",
-                content: "Product labeling, packaging, event giveaways, window decals, and more."
+                heading: "Ideal Uses",
+                content: "Labeling, event giveaways, product branding, and wall decals.",
+                image: "/images/services/stickers-uses.jpg"
             }
         ]
     },
     {
         id: "banners",
         title: "Banners",
-        description: "Weather-resistant banners for events, promotions, and business advertising.",
+        description: "Durable banners for outdoor advertising, exhibitions, and store promotions.",
         image: "/images/services/banners.jpg",
-        heroImage: "/images/services/banners-hero.jpg",
-        details: "Our banners are designed for durability, clarity, and visibility in all environments.",
+        heroImage: "/videos/banner-hero.mp4",
+        details: "Printed using UV-resistant inks on weatherproof material for vibrant outdoor messaging.",
         sections: [
             {
                 heading: "Banner Types",
-                content: "Flex banners, mesh banners, roll-up stands, backdrop banners, and hanging banners."
+                content: "Flex, mesh, retractable stands, backdrops, and pole banners.",
+                image: "/images/services/banner-types.jpg"
             },
             {
-                heading: "Printing Features",
-                content: "High-resolution large format printing with UV-resistant inks."
+                heading: "Print Technology",
+                content: "We use high-res large format printers for crisp text and graphics.",
+                video: "/videos/banner-printing.mp4"
             },
             {
-                heading: "Perfect For",
-                content: "Outdoor promotions, trade shows, shop fronts, and events."
+                heading: "Applications",
+                content: "Retail events, exhibitions, store fronts, trade shows, and community fairs.",
+                image: "/images/services/banner-usecases.jpg"
             }
         ]
     }
-]  
+];
+   
 
 
 const SerDetail = () => {
-    const { id } = useParams()  
-    const service = services.find(s => s.id === id)  
+    const { id } = useParams();
+    const service = services.find((item) => item.id === id);
 
     if (!service) {
-        return (
-            <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-6">
-                <h2 className="text-3xl font-bold mb-4 text-red-600">Service Not Found</h2>
-                <Link to="/service" className="text-blue-600 underline hover:text-blue-800">
-                    Back to Services
-                </Link>
-            </div>
-        )  
+        return <div className="text-center text-red-500 mt-10">Service not found.</div>;
     }
 
     return (
-        <div className="font-sans">
+        <div className="max-w-6xl mx-auto px-4 py-12">
             {/* Hero Section */}
-            <section
-                className="relative h-[60vh] flex items-center justify-center text-white"
-                style={{
-                    backgroundImage: `url(${service.heroImage || service.image})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                }}
+            <motion.div
+                className="w-full mb-8"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
             >
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+                <video
+                    src={service.heroImage}
+                    className="w-full h-72 object-cover rounded-2xl shadow-lg"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                />
+            </motion.div>
 
-                <div className="relative z-10 text-center px-4">
-                    <h1 className="text-5xl font-extrabold mb-4 drop-shadow-lg">{service.title}</h1>
-                    <p className="text-xl max-w-3xl mx-auto drop-shadow-md">{service.description}</p>
-                </div>
-            </section>
+            {/* Title and Description */}
+            <motion.div
+                className="mb-6 text-center"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+            >
+                <h1 className="text-4xl font-bold text-gray-800 mb-2">{service.title}</h1>
+                <p className="text-lg text-gray-600">{service.details}</p>
+            </motion.div>
 
-            {/* Main content wrapper */}
-            <main className="max-w-5xl mx-auto px-6 py-16 space-y-16">
-                {/* Overview Section */}
-                <section>
-                    <h2 className="text-3xl font-bold mb-6 text-blue-900">{service.title} Overview</h2>
-                    <p className="text-lg text-gray-700 leading-relaxed">{service.details}</p>
-                </section>
-
-                {/* Dynamic sections from service.sections */}
-                {service.sections.map((sec, i) => (
-                    <section key={i} className="bg-blue-50 p-8 rounded-lg shadow-md">
-                        <h3 className="text-2xl font-semibold mb-3 text-blue-800">{sec.heading}</h3>
-                        <p className="text-gray-700 leading-relaxed">{sec.content}</p>
-                    </section>
-                ))}
-
-                {/* Back to Services Link */}
-                <div className="text-center">
-                    <Link
-                        to="/services"
-                        className="inline-block px-6 py-3 bg-blue-700 text-white rounded-md hover:bg-blue-800 transition"
+            {/* Sections */}
+            <div className="space-y-16 mt-10">
+                {service.sections.map((section, index) => (
+                    <motion.div
+                        key={index}
+                        className="flex flex-col md:flex-row items-center gap-8"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: index * 0.2 }}
+                        viewport={{ once: true }}
                     >
-                        ← Back to Services
-                    </Link>
-                </div>
-            </main>
-        </div>
-    )  
-}  
+                        {/* Media */}
+                        <div className="w-full md:w-1/2">
+                            {section.video ? (
+                                <video
+                                    src={section.video}
+                                    className="w-full h-64 rounded-xl object-cover shadow-md"
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                />
+                            ) : (
+                                <img
+                                    src={section.image}
+                                    alt={section.heading}
+                                    className="w-full h-64 object-cover rounded-xl shadow-md"
+                                    loading="lazy"
+                                />
+                            )}
+                        </div>
 
-export default SerDetail  
+                        {/* Text */}
+                        <div className="w-full md:w-1/2">
+                            <h2 className="text-2xl font-semibold text-gray-800 mb-2">{section.heading}</h2>
+                            <p className="text-gray-600 text-base leading-relaxed">{section.content}</p>
+                        </div>
+                    </motion.div>
+                ))}
+            </div>
+        </div>
+    );
+};
+
+export default SerDetail;

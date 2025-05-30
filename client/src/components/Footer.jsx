@@ -22,7 +22,7 @@ const LocationMarker = () => {
 
 const Footer = () => {
     return (
-        <footer className="bg-blue-900 text-white py-12 px-6">
+        <footer className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white py-12 px-6">
             <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
                 {/* Logo & About */}
                 <div>

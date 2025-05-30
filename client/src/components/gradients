@@ -1,0 +1,5 @@
+solid backgrounds = bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-800
+navbar and footer = bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700
+cards = bg-blue-700
+light backgrounds = bg-gradient-to-r from-blue-100 to-blue-200
+video overlays = absolute inset-0 bg-black/60
